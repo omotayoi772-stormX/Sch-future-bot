@@ -1,4 +1,4 @@
-// Bright Future Bot — Vercel + WhatsApp (Environment Variables)
+// Bright Future Bot — Vercel + WhatsApp (Environment Variables)b
 
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -8,8 +8,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Twilio credentials from environment (do NOT hardcode)
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+const accountSid = process.env.TWILIO_ACCOUNT_SID; // Your SID
+const authToken = process.env.TWILIO_AUTH_TOKEN;   // Your Auth Token
 const twilioNumber = process.env.TWILIO_WHATSAPP_NUMBER;
 
 // Initialize Twilio client
@@ -45,7 +45,6 @@ function replyMessage(from, body) {
     case '2':
     case 'paid':
       message = `💰 To join, transfer money to:
-
 Bank: Monie Point
 Account Name: Delvers Science High School
 Account Number: 8123331941
